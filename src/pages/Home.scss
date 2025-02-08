@@ -1,0 +1,339 @@
+.home {
+  text-align: center;
+  padding: 0; // Remove padding to ensure the image fills the background
+
+  h1 {
+    color: #ffffffd0;
+    text-align: left;
+    font-size: 80px;
+    margin: 0; // Remove default margin
+    font-family: 'Cinzel', serif;
+  }
+
+  h2 {
+    color: #000000;
+    text-align: left;
+    margin: 0; // Remove default margin
+    font-size: 60px;
+    text-align: left;
+  }
+
+  .background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover; // Ensure the video covers its container
+    z-index: 0; // Place the video behind other elements
+  }
+
+  p {
+    color: #0a0a0a;
+    font-size: 18px;
+    margin: 0; // Remove default margin
+  }
+
+  .image-container {
+    width: 100%;
+    height: 100vh; // Full viewport height
+    overflow: hidden;
+    position: relative;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; // Ensure the image covers its container
+  }
+
+  .mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); // Semi-transparent black overlay
+    z-index: 1; // Ensure the mask is above the image
+  }
+
+  .text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 10%; // Adjust left position as needed
+    transform: translateY(-50%);
+    color: #fff;
+    text-align: left; // Align text to the left
+    z-index: 2; // Ensure the text is above the mask
+    width: 80%; // Limit text width for better readability
+  }
+
+  .div1 {
+    background-color: rgb(255, 255, 255);
+    margin: 0; // Remove default margin
+    padding: 0; // Remove default padding
+
+    .content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 30px;
+
+      .text {
+        flex: 1;
+        text-align: left;
+        padding-right: 20px;
+        padding-left: 30px;
+        p {
+          font-size: 40px; // Increase font size for the <p> element
+          color: #000; // Ensure the text color is visible
+        }
+        
+      }
+
+      .image {
+        flex: 1;
+        text-align: right;
+
+        img {
+          border-radius: 15px;
+          max-width: 100%;
+          height: auto;
+        }
+      }
+    }
+
+    @media (max-width: 768px) {
+      .content {
+        flex-direction: column;
+
+        .text {
+          padding-right: 0;
+          text-align: left;
+          p{
+            font-size: 24px;
+          }
+        }
+
+        .image {
+          text-align: center;
+          margin-top: 100px;
+
+          img {
+            max-width: 20%;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+
+  .div2 {
+    background-color: blanchedalmond;
+    margin: 0; // Remove default margin
+    padding: 0; // Remove default padding
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+  }
+
+  .services {
+    margin-left: 40px;
+    text-align: left; // Align text to the left
+    padding: 20px; // Add padding for better spacing
+    width: 100%; // Ensure full width
+    box-sizing: border-box; // Include padding in width calculation
+
+    p {
+      font-size: 40px; // Increase font size for the <p> element
+      color: #000; // Ensure the text color is visible
+    }
+  }
+
+  .container-wrapper {
+    display: flex;
+    flex-direction: row; // Arrange containers side by side on desktop
+    justify-content: space-between; // Add space between containers
+    gap: 20px; // Add gap between containers
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+
+    // Stack containers vertically on mobile
+    @media (max-width: 768px) {
+      flex-direction: column; // Stack containers vertically
+      gap: 10px; // Reduce gap for mobile
+    }
+
+    .container {
+      flex: 1; // Each container takes equal width
+      background-color: #49111c;
+      padding: 20px;
+      border-radius: 25px;
+    
+      text-align: left; // Align text to the left
+      padding: 25px;
+      margin-bottom:30px ;
+
+      img {
+        max-width: 15%; // Decrease the image size
+        height: auto; // Maintain aspect ratio
+        border-radius: 15px; // Add border radius to images
+      }
+
+      p {
+        color: #fff;
+        margin-top: 10px; // Add some space between the image and the text
+      }
+    }
+  }
+
+  .div3 {
+    background-color: #ffffff;
+    padding: 40px 20px;
+    text-align: center;
+
+    h2 {
+      font-size: 50px;
+      margin-bottom: 20px;
+      margin-left: 40px;
+    }
+
+    .carousel {
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto;
+      overflow: hidden;
+
+      .slides {
+        display: flex;
+        transition: transform 0.5s ;
+
+        img {
+          max-width: 100%;
+          display: none;
+          opacity: 0;
+          transition: opacity 1s ease-in-out;
+        }
+
+        img.active {
+          display: block;
+          opacity: 1;
+        }
+      }
+
+      .prev,
+      .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        z-index: 2;
+      }
+
+      .prev {
+        left: 10px;
+      }
+
+      .next {
+        right: 10px;
+      }
+    }
+  }
+
+  .button {
+    display: inline-block;
+    padding: 15px 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #fff;
+    background-color: #49111c;
+    border: none;
+    border-radius: 15px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-align: left; // Align text to the left
+
+    &:hover {
+      background-color: #ff6347; // Change color on hover (e.g., tomato)
+      transform: scale(1.05); // Slightly enlarge the button on hover
+    }
+
+    &:active {
+      transform: scale(0.95); // Slightly shrink the button when clicked
+    }
+  }
+
+  .div1 .button,
+  .div2 .button {
+    text-align: left; // Align button to the left
+    margin-left: 0; // Remove left margin
+    align-self: flex-start; // Align button to the start of the flex container
+  }
+
+  // Responsive design for tablets and smaller screens
+  @media (max-width: 1024px) {
+    h1 {
+      font-size: 60px; // Adjust font size for tablets
+    }
+
+    h2 {
+      font-size: 24px; // Adjust font size for tablets
+    }
+
+    .text-overlay {
+      left: 5%; // Adjust left position for tablets
+    }
+  }
+
+  // Responsive design for mobile devices
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 40px; // Adjust font size for mobile
+    }
+
+    h2 {
+      font-size: 20px; // Adjust font size for mobile
+    }
+
+    .text-overlay {
+      margin-top: 60px;
+      left: 5%; // Adjust left position for mobile
+      text-align: center; // Center text on mobile
+      width: 90%; // Increase width for better readability
+      transform: translate(-50%, -50%); // Center horizontally and vertically
+      left: 50%; // Center horizontally
+    }
+
+    .services {
+      text-align: left; // Align text to the left on mobile
+      padding: 10px; // Adjust padding for mobile
+
+      p {
+        font-size: 20px; // Adjust font size for mobile
+      }
+    }
+
+    .div3 {
+      padding: 20px 10px;
+
+      h2 {
+        font-size: 24px;
+      }
+
+      .carousel {
+        .prev,
+        .next {
+          padding: 5px;
+        }
+      }
+    }
+  }
+}

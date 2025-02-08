@@ -1,0 +1,291 @@
+.contact-page {
+    text-align: center;
+    padding: 0; // Remove padding to ensure the image fills the background
+  
+    h1 {
+      color: #ffffffd0;
+      text-align: left;
+      font-size: 80px;
+      margin: 0; // Remove default margin
+      font-family: 'Cinzel', serif;
+    }
+  
+    h2 {
+      color: #000000;
+      text-align: left;
+      margin: 0; // Remove default margin
+      font-size: 60px;
+      text-align: left;
+    }
+  
+    p {
+      color: #0a0a0a;
+      font-size: 18px;
+      margin: 0; // Remove default margin
+    }
+  
+    .contact-div1 {
+      background-color: blanchedalmond;
+      margin: 0; // Remove default margin
+      padding: 0; // Remove default padding
+  
+      .contact-content {
+        margin-top: 80px; // Adjust this value based on your navbar height
+        display: flex;
+        justify-content: space-between;
+        padding: 30px;
+  
+        .contact-left-side {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          padding-right: 20px;
+          padding-left: 30px;
+  
+          .contact-text {
+            text-align: left;
+          }
+  
+          .contact-form {
+            margin-top: 20px; // Add some space between text and form
+            form {
+              display: flex;
+              flex-direction: column;
+              input,
+              textarea {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+              }
+              button {
+                padding: 15px;
+                background-color: #49111c;
+                color: white;
+                border: none;
+                border-radius: 15px;
+                cursor: pointer;
+              }
+              button:hover {
+                background-color: #7b0e24;
+              }
+            }
+          }
+        }
+  
+        .contact-image {
+          flex: 1;
+          text-align: right;
+          margin-left: 20px; // Add space between form and image
+  
+          img {
+            border-radius: 30px;
+            max-width: 100%;
+            height: auto;
+          }
+        }
+      }
+  
+      @media (max-width: 768px) {
+        .contact-content {
+          flex-direction: column;
+  
+          .contact-text {
+            padding-right: 0;
+            text-align: left;
+            p{
+              font-size: 24px;
+            }
+          }
+  
+          .contact-image {
+            text-align: center;
+            margin-top: 100px;
+  
+            img {
+              max-width: 100%;
+              height: auto;
+              border-radius: 15px;
+            }
+          }
+        }
+      }
+    }
+  
+    .contact-div3 {
+        background-color: #1f1f1f;
+        padding: 40px 20px;
+        text-align: center;
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+        align-items: center;
+        
+        p{
+            color: blanchedalmond;
+            font-size: 30px;
+        }
+    
+        h2 {
+          font-size: 50px;
+          margin-bottom: 20px;
+          margin-left: 0px;
+          color: blanchedalmond;
+          text-align: center; // Center align the text
+        }
+  
+        .contact-info {
+          background-color: rgba(50, 50, 50, 0); // Transparent background
+          display: flex;
+          flex-direction: column;
+          align-items: center; // Center align items
+          text-align: center; // Center align text
+        }
+
+        @media (max-width: 768px) {
+          padding: 20px 10px;
+  
+          h2 {
+            font-size: 24px;
+          }
+        }
+      }
+  
+    .contact-container-wrapper {
+      display: flex;
+      flex-direction: row; // Arrange containers side by side on desktop
+      justify-content: space-between; // Add space between containers
+      gap: 20px; // Add gap between containers
+      margin-left: 20px;
+      margin-right: 20px;
+      margin-top: 20px;
+  
+      // Stack containers vertically on mobile
+      @media (max-width: 768px) {
+        flex-direction: column; // Stack containers vertically
+        gap: 10px; // Reduce gap for mobile
+      }
+  
+      .contact-container {
+        flex: 1; // Each container takes equal width
+        background-color: #49111c;
+        padding: 20px;
+        border-radius: 25px;
+      
+        text-align: center; // Align text to the center
+        padding: 25px;
+        margin-bottom:30px ;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center; // Center align items
+
+        img {
+          max-width: 15%; // Decrease the image size
+          height: auto; // Maintain aspect ratio
+          border-radius: 15px; // Add border radius to images
+        }
+  
+        p {
+          color: #fff;
+          margin-top: 10px; // Add some space between the image and the text
+        }
+
+        button {
+          margin-top: 10px; // Add some space above the button
+        }
+      }
+    }
+  
+    .button {
+      display: inline-block;
+      padding: 15px 30px;
+      margin-top: 30px;
+      margin-bottom: 20px;
+      font-size: 20px;
+      color: #fff;
+      background-color: #49111c;
+      border: none;
+      border-radius: 15px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      text-align: center; // Align text to the center
+  
+      &:hover {
+        background-color: #ff6347; // Change color on hover (e.g., tomato)
+        transform: scale(1.05); // Slightly enlarge the button on hover
+      }
+  
+      &:active {
+        transform: scale(0.95); // Slightly shrink the button when clicked
+      }
+    }
+
+    .instagram-button,
+    .whatsapp-button,
+    .gmail-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 20px;
+      margin-top: 30px;
+      font-size: 16px;
+      color: #fff;
+      background-color: #e1306b00; // Instagram color
+      border: 2px solid #fff;
+      border-radius: 15px;
+    
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    
+      svg {
+        margin-right: 8px;
+      }
+    
+      &:hover {
+        background-color: #f8d1e774; // Darker Instagram color
+        transform: scale(1.05); // Slightly enlarge the button on hover
+      }
+    
+      &:active {
+        transform: scale(0.95); // Slightly shrink the button when clicked
+      }
+    }
+    
+    .whatsapp-button {
+      margin-bottom: 30px; 
+    }
+    
+        @media (max-width: 1024px) {
+      h1 {
+        font-size: 60px; // Adjust font size for tablets
+      }
+  
+      h2 {
+        font-size: 24px; // Adjust font size for tablets
+      }
+    }
+  
+    // Responsive design for mobile devices
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 40px; // Adjust font size for mobile
+      }
+  
+      h2 {
+        font-size: 20px; // Adjust font size for mobile
+      }
+  
+      .contact-text {
+        padding-right: 0;
+        text-align: center; // Center text on mobile
+        width: 90%; // Increase width for better readability
+      }
+    }
+  }
+  
+.small-text {
+    font-size: 27px; // Adjust the font size as needed
+}

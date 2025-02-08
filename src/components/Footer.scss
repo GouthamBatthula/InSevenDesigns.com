@@ -1,0 +1,34 @@
+// src/components/Footer/Footer.scss
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: auto; /* Push footer to the bottom */
+  border-radius: 0px 30px 0 0; /* top-left, top-right, bottom-right, bottom-left */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Add shadow to the top */
+  position: relative;
+
+  .social-links {
+    margin-top: 10px;
+    a {
+      margin: 0 10px;
+      color: #fff;
+      font-size: 24px;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: #ff6347; // Change color on hover (e.g., tomato)
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 50px; // Adjust padding for mobile
+  }
+
+  p {
+    margin: 0;
+    font-size: 0.9rem;
+  }
+}
