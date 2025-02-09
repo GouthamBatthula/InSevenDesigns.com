@@ -23,7 +23,7 @@ const Contact = () => {
     e.preventDefault();
     const { name, email, phone, message } = formData;
     const whatsappMessage = `Name: ${name}%0AEmail: ${email}%0APhone: ${phone}%0AMessage: ${message}`;
-    window.open(`https://wa.me/6301938898?text=${whatsappMessage}`, '_blank'); // Replace with your WhatsApp number
+    window.open(`https://wa.me/+916301938898?text=${whatsappMessage}`, '_blank'); // Replace with your WhatsApp number
   };
 
   const handleInstagramClick = () => {
