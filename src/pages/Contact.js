@@ -31,7 +31,7 @@ const Contact = () => {
   };
 
   const handleWhatsAppClick = () => {
-    window.open('https://wa.me/6301938898', '_blank'); // Replace with your WhatsApp number
+    window.open('https://wa.me/+916301938898', '_blank'); // Replace with your WhatsApp number
   };
 
   const handleGmailClick = () => {
