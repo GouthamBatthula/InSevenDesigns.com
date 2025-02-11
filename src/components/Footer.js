@@ -21,7 +21,7 @@ const Footer = () => {
         <a href="https://wa.me/+916301938898?text=Hello%20INSEVENDESIGNS" target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon icon={faWhatsapp} />
         </a>
-        <a href="https://www.facebook.com/yourfacebookpage" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.facebook.com/share/19t1T5PrsA/?mibextid=wwXIfr " target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon icon={faFacebook} />
         </a>
       </div>
