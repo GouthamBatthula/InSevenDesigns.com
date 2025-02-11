@@ -43,7 +43,6 @@ const Home = () => {
   return (
     <div className="home">
       <div className="image-container">
-        <img src={imgSrc} alt="Home" />
         <div className="mask"></div>
         <div className="text-overlay">
           <h1><br></br><br></br><br></br><br></br><br></br>Transforming Spaces,<br></br>Enhancing Homes.</h1>
