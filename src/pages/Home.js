@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Home.scss';
-import imgSrc from '../assets/IMG_0816.png'; // Adjust the path as needed
 import videoSrc from '../assets/FINAL LOGO INTRO.mp4';
 import imgSrc1 from '../assets/div1.PNG'; // Adjust the path as needed
 import imgSrc2 from '../assets/2r.png'; // Adjust the path as needed
@@ -43,7 +42,6 @@ const Home = () => {
   return (
     <div className="home">
       <div className="image-container">
-        <img src={imgSrc} alt="Home" />
         <div className="mask"></div>
         <div className="text-overlay">
           <h1><br></br><br></br><br></br><br></br><br></br>Transforming Spaces,<br></br>Enhancing Homes.</h1>
